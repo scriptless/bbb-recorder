@@ -15,6 +15,8 @@ var width = 1280;
 var height = 720;
 var options = {
     headless: false,
+    ignoreHTTPSErrors: true,
+    acceptInsecureCerts: true,
     args: [
         '--enable-usermedia-screen-capturing',
         '--allow-http-screen-capture',
@@ -28,6 +30,8 @@ var options = {
         '--start-fullscreen',
         '--app=https://www.google.com/',
         `--window-size=${width},${height}`,
+        '--ignore-certificate-errors',
+        '--ignore-certificate-errors-spki-list'
     ],
 }
 
